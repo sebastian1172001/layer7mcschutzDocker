@@ -9,7 +9,7 @@ FROM        openjdk:8-jre-slim
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
 RUN apt update --yes \
- && apt add install curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 iptables ipset sudo --yes\
+ && apt install curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 iptables ipset sudo --yes\
  && useradd -D -h /home/container container
 
 USER container
