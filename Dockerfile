@@ -1,4 +1,4 @@
-FROM        quay.io/pterodactyl/core:java-glibc
+FROM        quay.io/pterodactyl/core:java
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
