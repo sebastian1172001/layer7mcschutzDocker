@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Test"
 cd /home/container
 
 # Output Current Java Version
