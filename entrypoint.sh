@@ -1,5 +1,12 @@
+#!/bin/bash
 cd /home/container
-java -version
-export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
+
+# Output Current Java Version
+java -version ## only really needed to show what version is being used. Should be changed for different applications
+
+# Replace Startup Variables
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
-eval ${MODIFIED_STARTUP}
+echo ":/home/container$ ${MODIFIED_STARTUP}"
+
+# Run the Server
+${MODIFIED_STARTUP}
